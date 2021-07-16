@@ -1,20 +1,32 @@
 import React from 'react'
-
+import classnames from 'classnames'
 import styles from './Toggle.module.css'
 
 interface ToggleProps {
-  size?: 'small' | 'medium' | 'large';
-  onClick?: () => void;
+  name: string;
+  checked: boolean;
+  id?: string;
+  size?: 'sm' | 'md' | 'lg';
+  onChange?: () => void;
+  disabled?: boolean;
 }
 
-export const Toggle = ({ 
-  size = 'medium',
+export const Toggle = ({
+  size = 'md',
   ...props
 }: ToggleProps) => {
+  
+  const toggleClasses = classnames({
+    [styles.toggle]: true,
+    [styles.sm]: size === 'sm',
+    [styles.md]: size === 'md',
+    [styles.lg]: size === 'lg',
+  })
+  
   return (
-    <label className={[styles.switch, styles[`switch--${size}`]].join(' ')}>
-      <input className={styles.input} type="checkbox" />
-      <span className={[styles.slider, styles[`slider--${size}`]].join(' ')}></span>
+    <label className={toggleClasses}>
+      <input type="checkbox" {...props} />
+      <span></span>
     </label>
   )
 }

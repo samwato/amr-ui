@@ -1,52 +1,52 @@
-.switch {
+.toggle {
   position: relative;
   display: inline-block;
 }
 
-.switch--small {
+.sm {
   height: 16px;
   width: 28px;
 }
 
-.switch--medium {
-  height: 21px;
-  width: 33px;
+.md {
+  height: 20px;
+  width: 36px;
 }
 
-.switch--large {
-  height: 26px;
-  width: 28px;
+.lg {
+  height: 24px;
+  width: 42px;
 }
 
-.input {
+.toggle input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-.input:checked + .slider {
-  background-color: blue;
+.toggle input:checked + span {
+  background-color: #1ea7fd;
 }
 
-input:checked + .slider--small:before {
+.toggle.sm input:checked + span:before {
   -webkit-transform: translateX(11px);
   -ms-transform: translateX(11px);
   transform: translateX(11px);
 }
 
-input:checked + .slider--medium:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+.toggle.md input:checked + span:before {
+  -webkit-transform: translateX(14px);
+  -ms-transform: translateX(14px);
+  transform: translateX(14px);
 }
 
-input:checked + .slider--large:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+.toggle.lg input:checked + span:before {
+  -webkit-transform: translateX(17px);
+  -ms-transform: translateX(17px);
+  transform: translateX(17px);
 }
 
-.slider {
+.toggle span {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -55,11 +55,11 @@ input:checked + .slider--large:before {
   bottom: 0;
   -webkit-transition: .4s;
   transition: .4s;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: #ccc;
 }
 
-.slider:before {
+.toggle span:before {
   position: absolute;
   content: '';
   background-color: white;
@@ -69,23 +69,23 @@ input:checked + .slider--large:before {
   box-shadow: 0px 0px 5px rgba(0,0,0,0.15);
 }
 
-.slider--small:before {
+.toggle.sm span:before {
   height: 8px;
   width: 8px;
   left: 5px;
   bottom: 4px;
 }
 
-.slider--medium:before {
-  height: 12px;
-  width: 12px;
-  left: 4px;
-  bottom: 4px;
+.toggle.md span:before {
+  height: 10px;
+  width: 10px;
+  left: 6px;
+  bottom: 5px;
 }
 
-.slider--large:before {
+.toggle.lg span:before {
   height: 12px;
   width: 12px;
-  left: 4px;
-  bottom: 4px;
+  left: 7px;
+  bottom: 6px;
 }

@@ -12,10 +12,23 @@ const Template: ComponentStory<typeof Toggle> = args => <Toggle {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  
+  name: 'Default',
 }
 
 export const Small = Template.bind({})
 Small.args = {
-  size: 'small'
+  name: 'Small',
+  size: 'sm'
+}
+
+export const Medium = Template.bind({})
+Medium.args = {
+  name: 'Medium',
+  size: 'md'
+}
+
+export const Large = Template.bind({})
+Large.args = {
+  name: 'Large',
+  size: 'lg'
 }
