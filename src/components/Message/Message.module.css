@@ -1,0 +1,3 @@
+.text {
+  composes: fontMedium from "../global.module.css"
+}

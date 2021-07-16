@@ -1,46 +1,67 @@
-# Getting Started with Create React App
+# Steps
+```
+npx create-react-app amr-ui --template typescript --use-npm
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+npm uninstall react-scripts
 
-## Available Scripts
+rm -r public src
+mkdir -p src/components
+touch src/index.js
 
-In the project directory, you can run:
+npx sb init
+npm i @storybook/addon-postcss
+npm i -D storybook-css-modules-preset typescript-plugin-css-modules
 
-### `npm start`
+// add to tsconfig.json
+  "compilerOptions": {
+    /..
+    "plugins": [{ "name": "typescript-plugin-css-modules" }],
+    /..
+  }
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+// add to .storybook/main.js
+  "@storybook/addon-postcss",
+  "storybook-css-modules-preset",
+  
+// package.json remove react scripts
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Initialise the project:
 
-### `npm run eject`
+# Clone the files
+  npx degit chromaui/learnstorybook-design-system-template learnstorybook-design-system
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  cd learnstorybook-design-system
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Install the dependencies
+  yarn install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Add Prettier:
+  yarn add --dev prettier
 
-## Learn More
+Add Storybook:
+  npx -p @storybook/cli sb init
+  yarn storybook
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Build out each component
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Distribute to NPM:
+
+  yarn add --dev @babel/cli cross-env
+  edit package.json for something
+
+  # Initializes a scoped package
+  yarn init --scope=@samwato
+
+  yarn add --dev auto
+  yarn auto create-labels
+
+
+Add Prettier:
+  yarn add --dev prettier
