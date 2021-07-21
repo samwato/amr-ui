@@ -2,6 +2,7 @@ import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Message } from './Message'
+import { iconNamesType } from '../Icon/src/types'
 
 export default {
   title: 'UI/Message',
@@ -13,6 +14,12 @@ const Template: ComponentStory<typeof Message> = (args) => <Message {...args} />
 export const Default = Template.bind({})
 Default.args = {
   message: 'Default Message',
+}
+
+export const WithIcon = Template.bind({})
+WithIcon.args = {
+  icon: 'ExclamationCircleIcon',
+  message: 'WithIcon Message',
 }
 
 export const Info = Template.bind({})

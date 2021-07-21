@@ -1,16 +1,21 @@
 import React from 'react'
-
+import classnames from 'classnames'
 import styles from './Message.module.css'
 
+import { iconNamesType } from '../Icon/src/types'
 import { Icon } from '../Icon'
 
 interface MessageProps {
-  icon?: string;
+  icon?: iconNamesType;
   message: string;
   variant?: 'info' | 'warning' | 'error' | 'success';
 }
 
-export const Message = ({ icon, message, variant = 'error' }: MessageProps) => {
+export const Message = ({
+  icon,
+  message,
+  variant = 'error'
+}: MessageProps) => {
   
   const variantOptions = {
     info: {

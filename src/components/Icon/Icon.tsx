@@ -1,15 +1,16 @@
 import React from 'react'
 import classnames from 'classnames'
 import styles from './Icon.module.css'
-import { iconNameTypes } from './src/types'
+import { iconNamesType } from './src/types'
+import { sizeType, variantType } from '../globalTypes'
 
 const icons = require('./src')
 
 interface IconProps {
-  name: iconNameTypes;
+  name: iconNamesType;
   type: 'outline' | 'solid';
-  size?: 'sm' | 'md' | 'lg';
-  variant?: 'info' | 'warning' | 'error' | 'success';
+  size?: sizeType;
+  variant?: variantType;
   backdrop?: boolean;
 }
 

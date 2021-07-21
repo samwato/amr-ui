@@ -1,13 +1,14 @@
 import React from 'react'
 import classnames from 'classnames'
 import styles from './Toggle.module.css'
+import { sizeType, themeType } from '../globalTypes'
 
 interface ToggleProps {
   name: string;
   checked: boolean;
   id?: string;
-  size?: 'sm' | 'md' | 'lg';
-  theme?: 'light' | 'dark';
+  size?: sizeType;
+  theme?: themeType;
   onChange?: () => void;
   disabled?: boolean;
 }
