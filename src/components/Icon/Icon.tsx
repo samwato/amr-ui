@@ -7,7 +7,7 @@ import { sizeType, variantType } from '../globalTypes'
 const icons = require('./src')
 
 interface IconProps {
-  name: iconNamesType;
+  icon: iconNamesType;
   type: 'outline' | 'solid';
   size?: sizeType;
   variant?: variantType;
@@ -15,7 +15,7 @@ interface IconProps {
 }
 
 export const Icon = ({
-  name,
+  icon,
   type,
   size = 'md',
   variant = 'info',
@@ -33,7 +33,7 @@ export const Icon = ({
     [styles.lg]: size === 'lg',
   })
   
-  const buildIcon = icons[type][name]()
+  const buildIcon = icons[type][icon]()
   
   return (
     <div className={containerClasses}>

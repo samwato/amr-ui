@@ -5,20 +5,23 @@
   --light: #E5E7EB;
   --dark: #374151;
   --info: rgb(37, 99, 235);
-  --info-trans: rgba(37, 99, 235, 0.15);
+  --info-trans: rgba(37, 99, 235, 0.1);
   --warning: rgb(217, 119, 6);
-  --warning-trans: rgba(217, 119, 6, 0.15);
+  --warning-trans: rgba(217, 119, 6, 0.1);
   --error: rgb(220, 38, 38);
-  --error-trans: rgba(220, 38, 38, 0.15);
+  --error-trans: rgba(220, 38, 38, 0.1);
   --success: rgb(5, 150, 105);
-  --success-trans: rgba(5, 150, 105, 0.15);
+  --success-trans: rgba(5, 150, 105, 0.1);
+  --text-light: white;
+  --text-dark: #222;
 }
 
 .themeFont {
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.fontMedium {
+.textReset {
   composes: themeFont;
-  font-size: 14px;
+  margin: 0px;
+  padding: 0px;
 }

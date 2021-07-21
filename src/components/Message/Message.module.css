@@ -1,3 +1,29 @@
-.text {
-  composes: fontMedium from "../global.module.css"
+.container {
+  border-radius: 5px;
+  padding: 6px 10px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  margin-bottom: 5px;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.info {
+  background-color: var(--info-trans);
+}
+
+.warning {
+  background-color: var(--warning-trans);
+}
+
+.error {
+  background-color: var(--error-trans);
+}
+
+.success {
+  background-color: var(--success-trans);
 }

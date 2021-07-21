@@ -1,0 +1,72 @@
+.text {
+  composes: textReset from '../global.module.css'
+}
+
+.light {
+  color: var(--text-dark);
+}
+
+.dark {
+  color: var(--text-light);
+}
+
+.info {
+  color: var(--info);
+}
+
+.warning {
+  color: var(--warning);
+}
+
+.error {
+  color: var(--error);
+}
+
+.success {
+  color: var(--success);
+}
+
+.xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.md {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.xl2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.xl3 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.xl4 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.xl5 {
+  font-size: 3rem;
+  line-height: 1;
+}
