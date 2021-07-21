@@ -2,7 +2,7 @@ import React from 'react'
 
 import styles from './Message.module.css'
 
-import { Icons } from '../Icons'
+import { Icon } from '../Icon'
 
 interface MessageProps {
   icon?: string;

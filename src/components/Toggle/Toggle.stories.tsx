@@ -15,6 +15,12 @@ Default.args = {
   name: 'Default',
 }
 
+export const Dark = Template.bind({})
+Dark.args = {
+  name: 'Dark',
+  theme: 'dark'
+}
+
 export const Small = Template.bind({})
 Small.args = {
   name: 'Small',

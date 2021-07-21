@@ -7,12 +7,14 @@ interface ToggleProps {
   checked: boolean;
   id?: string;
   size?: 'sm' | 'md' | 'lg';
+  theme?: 'light' | 'dark';
   onChange?: () => void;
   disabled?: boolean;
 }
 
 export const Toggle = ({
   size = 'md',
+  theme = 'light',
   ...props
 }: ToggleProps) => {
   
@@ -21,6 +23,8 @@ export const Toggle = ({
     [styles.sm]: size === 'sm',
     [styles.md]: size === 'md',
     [styles.lg]: size === 'lg',
+    [styles.light]: theme === 'light',
+    [styles.dark]: theme === 'dark',
   })
   
   return (
