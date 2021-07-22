@@ -2,12 +2,20 @@
   composes: textReset from '../global.module.css'
 }
 
+.primary {
+  color: var(--primary);
+}
+
+.secondary {
+  color: var(--secondary);
+}
+
 .light {
-  color: var(--text-dark);
+  color: var(--text-light);
 }
 
 .dark {
-  color: var(--text-light);
+  color: var(--text-dark);
 }
 
 .info {

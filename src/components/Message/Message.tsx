@@ -27,6 +27,10 @@ export const Message = ({
   
   const containerClasses = classnames({
     [styles.container]: true,
+    [styles.primary]: variant === 'primary',
+    [styles.secondary]: variant === 'secondary',
+    [styles.light]: variant === 'light',
+    [styles.dark]: variant === 'dark',
     [styles.info]: variant === 'info',
     [styles.warning]: variant === 'warning',
     [styles.error]: variant === 'error',

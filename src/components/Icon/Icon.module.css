@@ -1,3 +1,19 @@
+.primary {
+  color: var(--primary);
+}
+
+.secondary {
+  color: var(--secondary);
+}
+
+.light {
+  color: var(--light);
+}
+
+.dark {
+  color: var(--dark);
+}
+
 .info {
   color: var(--info);
 }
@@ -43,6 +59,22 @@
 
 .backdrop.lg {
   padding: 6px;
+}
+
+.backdrop.primary {
+  background-color: var(--primary-trans);
+}
+
+.backdrop.secondary {
+  background-color: var(--secondary-trans);
+}
+
+.backdrop.light {
+  background-color: var(--light-trans);
+}
+
+.backdrop.dark {
+  background-color: var(--dark-trans);
 }
 
 .backdrop.info {

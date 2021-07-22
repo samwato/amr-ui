@@ -23,26 +23,14 @@ WithIcon.args = {
   icon: 'ExclamationCircleIcon',
 }
 
-export const Info = Template.bind({})
-Info.args = {
+export const Sizes = Template.bind({})
+Sizes.args = {
   ...Default.args,
-  variant: 'info',
+  size: 'sm',
 }
 
-export const Warning = Template.bind({})
-Warning.args = {
-  ...Default.args,
-  variant: 'warning',
-}
-
-export const Error = Template.bind({})
-Error.args = {
+export const Variant = Template.bind({})
+Variant.args = {
   ...Default.args,
   variant: 'error',
-}
-
-export const Success = Template.bind({})
-Success.args = {
-  ...Default.args,
-  variant: 'success',
 }

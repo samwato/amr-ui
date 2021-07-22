@@ -1,25 +1,18 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Text } from './Text'
+import { TEMPLATENAME } from './TEMPLATENAME'
 
 export default {
-  title: 'UI/Text',
-  component: Text,
-} as ComponentMeta<typeof Text>
+  title: 'UI/TEMPLATENAME',
+  component: TEMPLATENAME,
+} as ComponentMeta<typeof TEMPLATENAME>
 
-const Template: ComponentStory<typeof Text> = (args) => 
-  <Text {...args}>
-    This is some basic paragraph text.
-  </Text>
+const Template: ComponentStory<typeof TEMPLATENAME> = (args) => <TEMPLATENAME {...args} />
 
 export const Default = Template.bind({})
-Default.args = {}
-
-export const Tags = Template.bind({})
-Tags.args = {
-  ...Default.args,
-  tag: 'h3',
+Default.args = {
+  
 }
 
 export const Sizes = Template.bind({})

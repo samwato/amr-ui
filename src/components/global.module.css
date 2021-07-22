@@ -1,9 +1,14 @@
 @import-normalize; /* bring in normalize.css styles */
 
 :root {
-  --primary: #2563EB;
-  --light: #E5E7EB;
-  --dark: #374151;
+  --primary: rgb(18, 201, 173);
+  --primary-trans: rgba(18, 201, 173, 0.1);
+  --secondary: rgb(55, 65, 81);
+  --secondary-trans: rgba(55, 65, 81, 0.1);
+  --light: rgb(229, 231, 235);
+  --light-trans: rgba(229, 231, 235, 0.1);
+  --dark: rgb(38, 38, 38);
+  --dark-trans: rgba(38, 38, 38, 0.1);
   --info: rgb(37, 99, 235);
   --info-trans: rgba(37, 99, 235, 0.1);
   --warning: rgb(217, 119, 6);

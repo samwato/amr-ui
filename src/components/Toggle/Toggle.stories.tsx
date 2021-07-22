@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { Toggle } from './Toggle'
 
 export default {
-  title: 'UI/Toggle',
+  title: 'Form/Toggle',
   component: Toggle,
 } as ComponentMeta<typeof Toggle>
 
@@ -15,26 +15,20 @@ Default.args = {
   name: 'Default',
 }
 
-export const Dark = Template.bind({})
-Dark.args = {
+export const Theme = Template.bind({})
+Theme.args = {
   name: 'Dark',
-  theme: 'dark'
+  darkTheme: true,
 }
 
-export const Small = Template.bind({})
-Small.args = {
-  name: 'Small',
+export const Sizes = Template.bind({})
+Sizes.args = {
+  name: 'Sizes',
   size: 'sm'
 }
 
-export const Medium = Template.bind({})
-Medium.args = {
-  name: 'Medium',
-  size: 'md'
-}
-
-export const Large = Template.bind({})
-Large.args = {
-  name: 'Large',
-  size: 'lg'
+export const Disabled = Template.bind({})
+Disabled.args = {
+  name: 'Disabled',
+  disabled: true
 }

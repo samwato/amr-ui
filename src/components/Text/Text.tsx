@@ -1,34 +1,32 @@
 import React from 'react'
 import classnames from 'classnames'
 import styles from './Text.module.css'
-import { textSizeType, variantType, themeType } from '../globalTypes'
+import { textSizeType, variantType } from '../globalTypes'
 
 interface TextProps {
   children: string;
   tag?: 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   size?: textSizeType;
-  theme?: themeType;
-  variant?: null | variantType;
+  variant?: variantType;
 }
 
 export const Text = ({
   children,
   tag = 'p',
   size = 'md',
-  theme = 'light',
-  variant,
+  variant = 'dark',
 }: TextProps) => {
-  
-  const textColor = !variant ? theme : variant
   
   const textClasses = classnames({
     [styles.text]: true,
-    [styles.light]: textColor === 'light',
-    [styles.dark]: textColor === 'dark',
-    [styles.info]: textColor === 'info',
-    [styles.warning]: textColor === 'warning',
-    [styles.error]: textColor === 'error',
-    [styles.success]: textColor === 'success',
+    [styles.primary]: variant === 'primary',
+    [styles.secondary]: variant === 'secondary',
+    [styles.light]: variant === 'light',
+    [styles.dark]: variant === 'dark',
+    [styles.info]: variant === 'info',
+    [styles.warning]: variant === 'warning',
+    [styles.error]: variant === 'error',
+    [styles.success]: variant === 'success',
     [styles.xs]: size === 'xs',
     [styles.sm]: size === 'sm',
     [styles.md]: size === 'md',

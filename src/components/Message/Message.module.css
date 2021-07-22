@@ -12,6 +12,22 @@
   margin-right: 5px;
 }
 
+.primary {
+  background-color: var(--primary-trans);
+}
+
+.secondary {
+  background-color: var(--secondary-trans);
+}
+
+.light {
+  background-color: var(--light-trans);
+}
+
+.dark {
+  background-color: var(--dark-trans);
+}
+
 .info {
   background-color: var(--info-trans);
 }

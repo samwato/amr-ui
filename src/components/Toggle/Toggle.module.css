@@ -56,14 +56,15 @@
   -webkit-transition: .4s;
   transition: .4s;
   border-radius: 20px;
-}
-
-.toggle.light span {
   background-color: #ddd;
 }
 
-.toggle.dark span {
+.toggle.darkTheme span {
   background-color: #666;
+}
+
+.toggle.disabled span {
+  cursor: default;
 }
 
 .toggle span:before {

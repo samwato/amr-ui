@@ -1,29 +1,21 @@
 import React from 'react'
 import classnames from 'classnames'
-import styles from './Icon.module.css'
-import { iconNamesType } from './src/types'
+import styles from './TEMPLATENAME.module.css'
 import { sizeType, variantType } from '../globalTypes'
 
-const icons = require('./src')
-
-interface IconProps {
-  icon: iconNamesType;
-  type: 'outline' | 'solid';
+interface TEMPLATENAMEProps {
   size?: sizeType;
   variant?: variantType;
-  backdrop?: boolean;
+  children?: React.ReactNode;
 }
 
-export const Icon = ({
-  icon,
-  type,
+export const TEMPLATENAME = ({
   size = 'md',
   variant = 'info',
-  backdrop = false,
-}: IconProps) => {
-
+  children,
+}: TEMPLATENAMEProps) => {
+  
   const containerClasses = classnames({
-    [styles.backdrop]: backdrop,
     [styles.primary]: variant === 'primary',
     [styles.secondary]: variant === 'secondary',
     [styles.light]: variant === 'light',
@@ -37,11 +29,7 @@ export const Icon = ({
     [styles.lg]: size === 'lg',
   })
   
-  const buildIcon = icons[type][icon]()
-  
   return (
-    <div className={containerClasses}>
-      {buildIcon}
-    </div>
+    
   )
 }
