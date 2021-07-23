@@ -1,24 +1,18 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Message } from './Message'
+import { Spinner } from './Spinner'
 
 export default {
-  title: 'UI/Message',
-  component: Message,
-} as ComponentMeta<typeof Message>
+  title: 'UI/Spinner',
+  component: Spinner,
+} as ComponentMeta<typeof Spinner>
 
-const Template: ComponentStory<typeof Message> = (args) => <Message {...args} />
+const Template: ComponentStory<typeof Spinner> = (args) => <Spinner {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  message: 'This is a sample message!'
-}
-
-export const WithIcon = Template.bind({})
-WithIcon.args = {
-  ...Default.args,
-  icon: 'ExclamationCircleIcon',
+  
 }
 
 export const Sizes = Template.bind({})

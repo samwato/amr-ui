@@ -1,43 +1,136 @@
-.primary {
-  color: var(--primary);
+.button {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
 }
 
-.secondary {
-  color: var(--secondary);
+.button:hover {
+  opacity: 0.7;
 }
 
-.light {
-  color: var(--light);
+.button.noLabel {
+  padding: 6px;
 }
 
-.dark {
-  color: var(--dark);
+.button.sm {
+  height: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-.info {
-  color: var(--info);
+.button.md {
+  height: 34px;
+  padding-left: 17px;
+  padding-right: 17px;
 }
 
-.warning {
-  color: var(--warning);
+.button.lg {
+  height: 38px;
+  padding-left: 19px;
+  padding-right: 19px;
 }
 
-.error {
-  color: var(--error);
+.loading {
+  opacity: 0;
 }
 
-.success {
-  color: var(--success);
+.loadingContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.sm {
-  
+.icon {
+  margin-right: 5px;
 }
 
-.md {
-  
+.icon.noLabel {
+  margin-right: 0px;
 }
 
-.lg {
-  
+.disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.solid {
+  border: none;
+}
+
+.solid.primary {
+  background-color: var(--primary);
+}
+
+.solid.secondary {
+  background-color: var(--secondary);
+}
+
+.solid.light {
+  background-color: var(--light);
+}
+
+.solid.dark {
+  background-color: var(--dark);
+}
+
+.solid.info {
+  background-color: var(--info);
+}
+
+.solid.warning {
+  background-color: var(--warning);
+}
+
+.solid.error {
+  background-color: var(--error);
+}
+
+.solid.success {
+  background-color: var(--success);
+}
+
+.outline {
+  background: transparent;
+}
+
+.outline.primary {
+  border: 1px solid var(--primary);
+}
+
+.outline.secondary {
+  border: 1px solid var(--secondary);
+}
+
+.outline.light {
+  border: 1px solid var(--light);
+}
+
+.outline.dark {
+  border: 1px solid var(--dark);
+}
+
+.outline.info {
+  border: 1px solid var(--info);
+}
+
+.outline.warning {
+  border: 1px solid var(--warning);
+}
+
+.outline.error {
+  border: 1px solid var(--error);
+}
+
+.outline.success {
+  border: 1px solid var(--success);
 }

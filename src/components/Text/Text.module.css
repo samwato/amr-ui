@@ -11,11 +11,11 @@
 }
 
 .light {
-  color: var(--text-light);
+  color: var(--light);
 }
 
 .dark {
-  color: var(--text-dark);
+  color: var(--dark);
 }
 
 .info {

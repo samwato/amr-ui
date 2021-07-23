@@ -1,14 +1,14 @@
 import React from 'react'
 import classnames from 'classnames'
 import styles from './Icon.module.css'
-import { iconNamesType } from './src/types'
+import { iconNamesType, iconStyleType } from './src/types'
 import { sizeType, variantType } from '../globalTypes'
 
 const icons = require('./src')
 
 interface IconProps {
   icon: iconNamesType;
-  type: 'outline' | 'solid';
+  style: iconStyleType;
   size?: sizeType;
   variant?: variantType;
   backdrop?: boolean;
@@ -16,7 +16,7 @@ interface IconProps {
 
 export const Icon = ({
   icon,
-  type,
+  style,
   size = 'md',
   variant = 'info',
   backdrop = false,
@@ -37,7 +37,7 @@ export const Icon = ({
     [styles.lg]: size === 'lg',
   })
   
-  const buildIcon = icons[type][icon]()
+  const buildIcon = icons[style][icon]()
   
   return (
     <div className={containerClasses}>

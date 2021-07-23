@@ -1,12 +1,18 @@
 import React from 'react'
 import classnames from 'classnames'
 import styles from './Text.module.css'
-import { textSizeType, variantType } from '../globalTypes'
+import {
+  textWeightTypes,
+  textSizeType,
+  variantType,
+  textTagType,
+} from '../globalTypes'
 
 interface TextProps {
   children: string;
-  tag?: 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  tag?: textTagType;
   size?: textSizeType;
+  weight?: textWeightTypes;
   variant?: variantType;
 }
 
@@ -14,6 +20,7 @@ export const Text = ({
   children,
   tag = 'p',
   size = 'md',
+  weight,
   variant = 'dark',
 }: TextProps) => {
   
@@ -38,10 +45,17 @@ export const Text = ({
     [styles.xl5]: size === 'xl5',
   })
   
+  const textStyles = {
+    fontWeight: weight ? weight : 'inherit'
+  }
+  
   return (
     React.createElement(
       tag,
-      { className: textClasses },
+      {
+        className: textClasses,
+        style: textStyles,
+       },
       children
     )
   )

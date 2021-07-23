@@ -5,8 +5,8 @@
   --primary-trans: rgba(18, 201, 173, 0.1);
   --secondary: rgb(55, 65, 81);
   --secondary-trans: rgba(55, 65, 81, 0.1);
-  --light: rgb(229, 231, 235);
-  --light-trans: rgba(229, 231, 235, 0.1);
+  --light: rgb(255, 255, 255);
+  --light-trans: rgba(255, 255, 255, 0.1);
   --dark: rgb(38, 38, 38);
   --dark-trans: rgba(38, 38, 38, 0.1);
   --info: rgb(37, 99, 235);
@@ -17,8 +17,6 @@
   --error-trans: rgba(220, 38, 38, 0.1);
   --success: rgb(5, 150, 105);
   --success-trans: rgba(5, 150, 105, 0.1);
-  --text-light: white;
-  --text-dark: #222;
 }
 
 .themeFont {

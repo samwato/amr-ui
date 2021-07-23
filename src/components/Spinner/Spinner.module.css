@@ -1,0 +1,76 @@
+.xs {
+  width: 12px;
+  height: 12px;
+}
+
+.sm {
+  width: 16px;
+  height: 16px;
+}
+
+.md {
+  width: 20px;
+  height: 20px;
+}
+
+.lg {
+  width: 24px;
+  height: 24px;
+}
+
+.xl {
+  width: 28px;
+  height: 28px;
+}
+
+.xl2 {
+  width: 32px;
+  height: 32px;
+}
+
+.xl3 {
+  width: 36px;
+  height: 36px;
+}
+
+.xl4 {
+  width: 40px;
+  height: 40px;
+}
+
+.xl5 {
+  width: 44px;
+  height: 44px;
+}
+
+.primary {
+  color: var(--primary);
+}
+
+.secondary {
+  color: var(--secondary);
+}
+
+.light {
+  color: var(--light);
+}
+
+.dark {
+  color: var(--dark);
+}
+
+.info {
+  color: var(--info);
+}
+
+.warning {
+  color: var(--warning);
+}
+
+.error {
+  color: var(--error);
+}
+
+.success {
+  color: var(--success);
+}
