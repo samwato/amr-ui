@@ -18,7 +18,7 @@ export const Icon = ({
   icon,
   style,
   size = 'md',
-  variant = 'info',
+  variant,
   backdrop = false,
 }: IconProps) => {
 

@@ -9,10 +9,6 @@
   position: relative;
 }
 
-.button:hover {
-  opacity: 0.7;
-}
-
 .button.noLabel {
   padding: 6px;
 }
@@ -59,78 +55,104 @@
 }
 
 .disabled {
-  opacity: 0.7;
+  opacity: 0.5;
   cursor: default;
 }
 
-.solid {
+.primary {
+  color: var(--light-text);
+  background-color: var(--primary);
   border: none;
 }
-
-.solid.primary {
-  background-color: var(--primary);
+.primary:hover {
+  background-color: var(--primary-dark-1);
+}
+.primary:focus {
+  background-color: var(--primary-dark-2);
 }
 
-.solid.secondary {
-  background-color: var(--secondary);
+.secondary {
+  color: var(--primary);
+  background-color: var(--primary-light-3);
+  border: 1px solid var(--primary-light-2);
+}
+.secondary:hover {
+  background-color: var(--primary-light-2);
+  border: 1px solid var(--primary-light-1);
+}
+.secondary:focus {
+  background-color: var(--primary-light-1);
+  border: 1px solid var(--primary-light-1);
 }
 
-.solid.light {
-  background-color: var(--light);
+.plain {
+  color: var(--dark-text-light-1);
+  background: none;
+  border: none;
 }
-
-.solid.dark {
-  background-color: var(--dark);
+.plain:hover {
+  background-color: var(--light-text-dark-1);
 }
-
-.solid.info {
-  background-color: var(--info);
-}
-
-.solid.warning {
-  background-color: var(--warning);
-}
-
-.solid.error {
-  background-color: var(--error);
-}
-
-.solid.success {
-  background-color: var(--success);
+.plain:focus {
+  background-color: var(--light-text-dark-2);
 }
 
 .outline {
-  background: transparent;
+  color: var(--dark-text-light-1);
+  background: none;
+  border: 1px solid var(--light-text-dark-2);
+}
+.outline:hover {
+  background-color: var(--light-text-dark-1);
+}
+.outline:focus {
+  background-color: var(--light-text-dark-2);
 }
 
-.outline.primary {
-  border: 1px solid var(--primary);
+.dark {
+  color: var(--light-text);
+  background-color: var(--dark-text-light-1);
+  border: none;
+}
+.dark:hover {
+  background-color: var(--dark-text);
+}
+.dark:focus {
+  background-color: var(--dark-text);
 }
 
-.outline.secondary {
-  border: 1px solid var(--secondary);
+.light {
+  color: var(--dark-text-light-1);
+  background-color: var(--light-text);
+  border: none;
+}
+.light:hover {
+  background-color: var(--light-text-dark-1);
+}
+.light:focus {
+  background-color: var(--light-text-dark-1);
 }
 
-.outline.light {
-  border: 1px solid var(--light);
+.info {
+  color: var(--light-text);
+  background-color: var(--info);
+  border: none;
 }
 
-.outline.dark {
-  border: 1px solid var(--dark);
+.warning {
+  color: var(--light-text);
+  background-color: var(--warning);
+  border: none;
 }
 
-.outline.info {
-  border: 1px solid var(--info);
+.error {
+  color: var(--light-text);
+  background-color: var(--error);
+  border: none;
 }
 
-.outline.warning {
-  border: 1px solid var(--warning);
-}
-
-.outline.error {
-  border: 1px solid var(--error);
-}
-
-.outline.success {
-  border: 1px solid var(--success);
+.success {
+  color: var(--light-text);
+  background-color: var(--success);
+  border: none;
 }

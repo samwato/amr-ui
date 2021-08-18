@@ -21,7 +21,7 @@ export const Text = ({
   tag = 'p',
   size = 'md',
   weight,
-  variant = 'dark',
+  variant,
 }: TextProps) => {
   
   const textClasses = classnames({

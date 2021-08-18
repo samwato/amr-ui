@@ -1,22 +1,30 @@
 @import-normalize; /* bring in normalize.css styles */
 
 :root {
-  --primary: rgb(18, 201, 173);
-  --primary-trans: rgba(18, 201, 173, 0.1);
-  --secondary: rgb(55, 65, 81);
-  --secondary-trans: rgba(55, 65, 81, 0.1);
-  --light: rgb(255, 255, 255);
-  --light-trans: rgba(255, 255, 255, 0.1);
-  --dark: rgb(38, 38, 38);
-  --dark-trans: rgba(38, 38, 38, 0.1);
-  --info: rgb(37, 99, 235);
-  --info-trans: rgba(37, 99, 235, 0.1);
-  --warning: rgb(217, 119, 6);
-  --warning-trans: rgba(217, 119, 6, 0.1);
-  --error: rgb(220, 38, 38);
-  --error-trans: rgba(220, 38, 38, 0.1);
-  --success: rgb(5, 150, 105);
-  --success-trans: rgba(5, 150, 105, 0.1);
+  --primary-dark-2: #002F9A;
+  --primary-dark-1: #003ECB;
+  --primary: #0057FF;
+  --primary-light-1: #B7CDFF;
+  --primary-light-2: #DEE8FF;
+  --primary-light-3: #F5F8FF;
+  
+  --light-text-dark-2: #E4E4E4;
+  --light-text-dark-1: #F1F1F1;
+  --light-text: #FFFFFF;
+  --dark-text: #191919;
+  --dark-text-light-1: #595D69;
+  --dark-text-light-2: #A2A7B6;
+  --dark-text-light-3: #CBCFDB;
+  
+  --light-background-dark-2: #F2F2F2;
+  --light-background-dark-1: #F9F9F9;
+  --light-background: #FFFFFF;
+  --dark-background: #18191A;
+  
+  --info: #8BAAB7;
+  --warning: #FFBC58;
+  --error: #FF5858;
+  --success: #53E09A;
 }
 
 .themeFont {

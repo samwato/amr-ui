@@ -34,12 +34,6 @@ Variant.args = {
   variant: 'error',
 }
 
-export const Type = Template.bind({})
-Type.args = {
-  ...Default.args,
-  style: 'outline',
-}
-
 export const Disabled = Template.bind({})
 Disabled.args = {
   ...Default.args,

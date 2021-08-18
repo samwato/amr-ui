@@ -14,7 +14,6 @@ type ButtonProps = {
   iconStyle?: iconStyleType;
   size?: sizeType;
   type?: 'button' | 'submit';
-  style?: 'outline' | 'solid';
   variant?: variantType;
   textWeight: textWeightTypes;
   disabled?: boolean;
@@ -28,7 +27,6 @@ export const Button = ({
   iconStyle = 'outline',
   type = 'button',
   size = 'md',
-  style = 'solid',
   variant = 'primary',
   textWeight = '600',
   disabled = false,
@@ -42,10 +40,10 @@ export const Button = ({
     [styles.sm]: size === 'sm',
     [styles.md]: size === 'md',
     [styles.lg]: size === 'lg',
-    [styles.outline]: style === 'outline',
-    [styles.solid]: style === 'solid',
     [styles.primary]: variant === 'primary',
     [styles.secondary]: variant === 'secondary',
+    [styles.plain]: variant === 'plain',
+    [styles.outline]: variant === 'outline',
     [styles.light]: variant === 'light',
     [styles.dark]: variant === 'dark',
     [styles.info]: variant === 'info',
@@ -67,50 +65,27 @@ export const Button = ({
   
   const iconComponent = icon ? 
     <div className={iconClasses}>
-      { style === 'outline' ?
       <Icon
         icon={icon}
         style={iconStyle}
         size={size}
-        variant={variant}/> : 
-      <Icon
-        icon={icon}
-        style={iconStyle}
-        size={size}
-        variant={variant  === 'light' ? 'dark' : 'light'}/>
-      }
+      />
     </div> : null
     
   const labelComponent = label ?
     <div className={labelClasses}>
-      { style === 'outline' ?
-        <Text
-          tag="span"
-          size={size}
-          weight={textWeight}
-          variant={variant}
-        >{label}</Text> : 
-        <Text
-          tag="span"
-          size={size}
-          weight={textWeight}
-          variant={variant  === 'light' ? 'dark' : 'light'}
-        >{label}</Text>
-      }
+      <Text
+        tag="span"
+        size={size}
+        weight={textWeight}
+      >{label}</Text>
     </div> : null
     
   const loadingComponent = loading ?
     <div className={styles.loadingContainer}>
-      { style === 'outline' ?
-        <Spinner
-          size={size}
-          variant={variant}
-        /> :
-        <Spinner
-          size={size}
-          variant={variant  === 'light' ? 'dark' : 'light'}
-        />
-      }
+      <Spinner
+        size={size}
+      />
     </div> : null
   
   return (

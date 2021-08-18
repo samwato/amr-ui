@@ -10,7 +10,7 @@ interface SpinnerProps {
 
 export const Spinner = ({
   size = 'md',
-  variant = 'info',
+  variant
 }: SpinnerProps) => {
   
   const spinnerClasses = classnames({
