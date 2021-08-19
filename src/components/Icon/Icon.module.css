@@ -30,6 +30,11 @@
   color: var(--success);
 }
 
+.xs {
+  width: 14px;
+  height: 14px;
+}
+
 .sm {
   width: 16px;
   height: 16px;
@@ -43,6 +48,11 @@
 .lg {
   width: 24px;
   height: 24px;
+}
+
+.xl {
+  width: 36px;
+  height: 36px;
 }
 
 .backdrop {
