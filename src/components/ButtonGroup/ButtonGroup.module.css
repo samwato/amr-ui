@@ -1,0 +1,40 @@
+.group {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+button + button {
+  margin-left: 0;
+}
+
+
+.joined > button {
+  border-radius: 0px;
+  margin-left: -1px;
+}
+
+.joined button:first-child {
+  border-radius: 5px 0px 0px 5px;
+  margin-left: 0px;
+}
+
+.joined button:last-child {
+  border-radius: 0px 5px 5px 0px;
+}
+
+.start {
+  justify-content: flex-start;
+}
+.center {
+  justify-content: center;
+}
+.end {
+  justify-content: flex-end;
+}
+.between {
+  justify-content: space-between;
+}
+.around {
+  justify-content: space-around;
+}
