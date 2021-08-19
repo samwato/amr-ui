@@ -19,7 +19,7 @@ interface TextProps {
 export const Text = ({
   children,
   tag = 'p',
-  size = 'md',
+  size,
   weight,
   variant,
 }: TextProps) => {

@@ -79,7 +79,6 @@ export const Button = ({
     <div className={labelClasses}>
       <Text
         tag="span"
-        size={size}
         weight={textWeight}
       >{label}</Text>
     </div> : null

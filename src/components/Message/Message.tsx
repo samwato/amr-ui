@@ -13,22 +13,20 @@ interface MessageProps {
   size?: sizeType;
   variant?: variantType;
   children?: React.ReactNode;
-  onClick?: () => void;
 }
 
 export const Message = ({
-  message,
   icon,
-  size = 'md',
   variant = 'info',
   children,
-  onClick,
 }: MessageProps) => {
   
   const containerClasses = classnames({
     [styles.container]: true,
     [styles.primary]: variant === 'primary',
     [styles.secondary]: variant === 'secondary',
+    [styles.plain]: variant === 'plain',
+    [styles.outline]: variant === 'outline',
     [styles.light]: variant === 'light',
     [styles.dark]: variant === 'dark',
     [styles.info]: variant === 'info',
@@ -38,23 +36,17 @@ export const Message = ({
   })
   
   return (
-    <div className={containerClasses} onClick={onClick}>
+    <div className={containerClasses}>
       { icon ?
       <div className={styles.icon}>
         <Icon
           icon={icon}
-          style="outline"
-          size={size}
+          style="solid"
           variant={variant}
         />
       </div>
       : null }
       <div>
-        <Text
-          tag="p"
-          size={size}
-          variant={variant}
-        >{message}</Text>
         {children}
       </div>
     </div>

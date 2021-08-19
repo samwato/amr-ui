@@ -1,44 +1,60 @@
 .container {
   border-radius: 5px;
-  padding: 6px 10px;
+  padding: 15px;
   display: flex;
   flex-direction: row;
   overflow-x: auto;
-  align-items: center;
 }
 
 .icon {
-  margin-right: 5px;
+  margin-top:5px;
+  margin-right: 15px;
 }
 
 .primary {
   background-color: var(--primary-trans);
+  border: 1px solid var(--primary-trans);
 }
 
 .secondary {
-  background-color: var(--secondary-trans);
+  background-color: var(--primary-trans);
+  border: 1px solid var(--primary-trans);
+}
+
+.plain {
+
+}
+
+.outline {
+  border: 1px solid var(--dark-text-trans);
 }
 
 .light {
-  background-color: var(--light-trans);
+  background-color: var(--light-text-trans);
+  border: 1px solid var(--light-text-trans);
 }
 
 .dark {
-  background-color: var(--dark-trans);
+  background-color: var(--dark-text-trans);
+  border: 1px solid var(--dark-text-trans);
 }
 
 .info {
   background-color: var(--info-trans);
+  border: 1px solid var(--info-trans);
 }
 
 .warning {
   background-color: var(--warning-trans);
+  border: 1px solid var(--warning-trans);
 }
 
 .error {
   background-color: var(--error-trans);
+  border: 1px solid var(--error-trans);
 }
 
 .success {
   background-color: var(--success-trans);
+  border: 1px solid var(--success-trans);
 }
