@@ -1,47 +1,36 @@
 import React from 'react'
 import classnames from 'classnames'
-import styles from './Button.module.css'
-import { sizeType, variantType, textWeightTypes } from '../globalTypes'
+import styles from './Tag.module.css'
+import { variantType } from '../globalTypes'
 
 import { iconNamesType, iconStyleType } from '../Icon/src/types'
 import { Icon } from '../Icon'
 import { Text } from '../Text'
-import { Spinner } from '../Spinner'
 
-type ButtonProps = {
-  label?: string;
+type TagProps = {
+  label: string;
   icon?: iconNamesType;
   iconStyle?: iconStyleType;
-  size?: sizeType;
-  type?: 'button' | 'submit';
   variant?: variantType;
-  textWeight?: textWeightTypes;
-  fullwidth?: boolean;
+  removable: boolean;
   disabled?: boolean;
-  loading?: boolean;
   onClick?: () => void;
+  onRemove?: () => void;
 }
 
-export const Button = ({
+export const Tag = ({
   label,
   icon,
   iconStyle = 'outline',
-  type = 'button',
-  size = 'md',
   variant = 'primary',
-  textWeight = '600',
-  fullwidth = false,
+  removable = false,
   disabled = false,
-  loading = false,
   onClick,
-}: ButtonProps) => {
+  onRemove,
+}: TagProps) => {
   
-  const buttonClasses = classnames({
-    [styles.button]: true,
-    [styles.noLabel]: !label,
-    [styles.sm]: size === 'sm',
-    [styles.md]: size === 'md',
-    [styles.lg]: size === 'lg',
+  const tagClasses = classnames({
+    [styles.tag]: true,
     [styles.primary]: variant === 'primary',
     [styles.secondary]: variant === 'secondary',
     [styles.plain]: variant === 'plain',
@@ -52,18 +41,15 @@ export const Button = ({
     [styles.warning]: variant === 'warning',
     [styles.error]: variant === 'error',
     [styles.success]: variant === 'success',
-    [styles.fullwidth]: fullwidth,
     [styles.disabled]: disabled,
   })
   
   const iconClasses = classnames({
     [styles.icon]: true,
-    [styles.noLabel]: !label,
-    [styles.loading]: loading,
   })
   
-  const labelClasses = classnames({
-    [styles.loading]: loading,
+  const removableClasses = classnames({
+    [styles.removable]: true,
   })
   
   const iconComponent = icon ? 
@@ -71,35 +57,38 @@ export const Button = ({
       <Icon
         icon={icon}
         style={iconStyle}
-        size={size}
+        size="sm"
       />
     </div> : null
     
-  const labelComponent = label ?
-    <div className={labelClasses}>
+  const labelComponent = 
+    <div>
       <Text
         tag="span"
-        size={size}
-        weight={textWeight}
+        size="sm"
       >{label}</Text>
-    </div> : null
-    
-  const loadingComponent = loading ?
-    <div className={styles.loadingContainer}>
-      <Spinner
-        size={size}
+    </div>
+  
+  const removableComponent = 
+    <div
+      className={removableClasses}
+      onClick={onRemove}>
+      <Icon
+        icon="XCircleIcon"
+        style="solid"
+        size="sm"
       />
-    </div> : null
+    </div>
   
   return (
     <button 
-      className={buttonClasses}
-      type={type}
+      className={tagClasses}
+      type="button"
       onClick={onClick}
     >
-      {loadingComponent}
       {iconComponent}
       {labelComponent}
+      {removable ? removableComponent : null}
     </button>
   )
 }

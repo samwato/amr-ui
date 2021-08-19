@@ -1,5 +1,6 @@
-.button {
-  border-radius: 5px;
+.tag {
+  border-radius: 12px;
+  height: 24px;
   display: flex;
   flex-direction: row;
   overflow-x: auto;
@@ -7,53 +8,11 @@
   cursor: pointer;
   box-sizing: border-box;
   position: relative;
-  text-align: center;
-  justify-content: center;
-}
-
-.button.noLabel {
-  padding: 6px;
-}
-
-.button.sm {
-  height: 30px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.button.md {
-  height: 34px;
-  padding-left: 17px;
-  padding-right: 17px;
-}
-
-.button.lg {
-  height: 38px;
-  padding-left: 19px;
-  padding-right: 19px;
-}
-
-.loading {
-  opacity: 0;
-}
-
-.loadingContainer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 0 10px;
 }
 
 .icon {
   margin-right: 5px;
-}
-
-.icon.noLabel {
-  margin-right: 0px;
 }
 
 .disabled {
@@ -61,8 +20,9 @@
   cursor: default;
 }
 
-.fullwidth {
-  width: 100%;
+.removable {
+  margin-right: -5px;
+  margin-left: 5px;
 }
 
 .primary {
