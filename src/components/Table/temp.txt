@@ -1,0 +1,44 @@
+// const headerCells = data.headers.map(({ name, displayName }) => {
+//   return (
+//     <div key={name} className={styles.headerContainer}>
+//       <div className={styles.headerContent}>
+//         <div className={styles.headerText}>
+//           <Text
+//             tag="span"
+//             size="sm"
+//           >{displayName}</Text>
+//         </div>
+//           <Icon
+//             icon="ArrowDownIcon"
+//             style="solid"
+//             size="sm"
+//           />
+//       </div>
+//       <div className={styles.resizeHandle}>
+//       </div>
+//     </div>
+//   )
+// })
+// 
+// const rowCells = data.fields.map(field => {
+//   return (
+//     <div>
+//       {data.headers.map(({ name }) => {
+//         return (
+//           <div>
+//             name
+//           </div>
+//         )
+//       })}
+//     </div>
+//   )
+// })
+
+
+
+// <div style={{ width: `${width}px`, height: `${height}px` }}>
+//   <div className={styles.table}>
+//     {headerCells}
+//     {rowCells}
+//   </div>
+// </div>

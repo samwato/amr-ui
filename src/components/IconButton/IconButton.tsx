@@ -3,8 +3,7 @@ import classnames from 'classnames'
 import styles from './IconButton.module.css'
 import { iconSizeType, variantType } from '../globalTypes'
 
-import { iconNamesType, iconStyleType } from '../Icon/src/types'
-import { Icon } from '../Icon'
+import { Icon, iconNamesType, iconStyleType } from '../Icon'
 
 type IconButtonProps = {
   icon: iconNamesType;
@@ -13,6 +12,7 @@ type IconButtonProps = {
   type?: 'button' | 'submit';
   variant?: variantType;
   disabled?: boolean;
+  title?: string;
   onClick?: () => void;
 }
 
@@ -23,6 +23,7 @@ export const IconButton = ({
   size = 'md',
   variant = 'primary',
   disabled = false,
+  title,
   onClick,
 }: IconButtonProps) => {
   
@@ -45,6 +46,7 @@ export const IconButton = ({
     <button 
       className={buttonClasses}
       type={type}
+      title={title}
       onClick={onClick}
     >
       <Icon

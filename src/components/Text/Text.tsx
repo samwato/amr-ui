@@ -8,7 +8,7 @@ import {
   textTagType,
 } from '../globalTypes'
 
-interface TextProps {
+type TextProps = {
   children: string;
   tag?: textTagType;
   size?: textSizeType;

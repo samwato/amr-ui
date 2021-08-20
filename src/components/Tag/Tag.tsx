@@ -3,8 +3,7 @@ import classnames from 'classnames'
 import styles from './Tag.module.css'
 import { variantType } from '../globalTypes'
 
-import { iconNamesType, iconStyleType } from '../Icon/src/types'
-import { Icon } from '../Icon'
+import { Icon, iconNamesType, iconStyleType } from '../Icon'
 import { Text } from '../Text'
 
 type TagProps = {

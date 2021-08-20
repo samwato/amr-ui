@@ -3,8 +3,7 @@ import classnames from 'classnames'
 import styles from './Message.module.css'
 import { sizeType, variantType } from '../globalTypes'
 
-import { iconNamesType } from '../Icon/src/types'
-import { Icon } from '../Icon'
+import { Icon, iconNamesType, iconStyleType } from '../Icon'
 import { Text } from '../Text'
 
 interface MessageProps {

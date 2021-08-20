@@ -12,7 +12,8 @@ const Template: ComponentStory<typeof IconButton> = (args) => <IconButton {...ar
 
 export const Default = Template.bind({})
 Default.args = {
-  icon: "TrashIcon"
+  icon: "TrashIcon",
+  title: "delete",
 }
 
 export const Sizes = Template.bind({})

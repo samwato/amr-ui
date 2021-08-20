@@ -3,7 +3,7 @@ import classnames from 'classnames'
 import styles from './Toggle.module.css'
 import { sizeType } from '../globalTypes'
 
-interface ToggleProps {
+type ToggleProps = {
   name: string;
   checked: boolean;
   id?: string;

@@ -3,8 +3,7 @@ import classnames from 'classnames'
 import styles from './Button.module.css'
 import { sizeType, variantType, textWeightTypes } from '../globalTypes'
 
-import { iconNamesType, iconStyleType } from '../Icon/src/types'
-import { Icon } from '../Icon'
+import { Icon, iconNamesType, iconStyleType } from '../Icon'
 import { Text } from '../Text'
 import { Spinner } from '../Spinner'
 
@@ -19,6 +18,7 @@ type ButtonProps = {
   fullwidth?: boolean;
   disabled?: boolean;
   loading?: boolean;
+  title?: string;
   onClick?: () => void;
 }
 
@@ -33,6 +33,7 @@ export const Button = ({
   fullwidth = false,
   disabled = false,
   loading = false,
+  title,
   onClick,
 }: ButtonProps) => {
   
@@ -94,6 +95,7 @@ export const Button = ({
     <button 
       className={buttonClasses}
       type={type}
+      title={title}
       onClick={onClick}
     >
       {loadingComponent}
