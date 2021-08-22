@@ -1,16 +1,16 @@
 import React from 'react'
 import classnames from 'classnames'
 import styles from './Tag.module.css'
-import { variantType } from '../globalTypes'
+import { VariantType } from '../globalTypes'
 
-import { Icon, iconNamesType, iconStyleType } from '../Icon'
+import { Icon, IconNamesType, IconStyleType } from '../Icon'
 import { Text } from '../Text'
 
 type TagProps = {
   label: string;
-  icon?: iconNamesType;
-  iconStyle?: iconStyleType;
-  variant?: variantType;
+  icon?: IconNamesType;
+  iconStyle?: IconStyleType;
+  variant?: VariantType;
   removable: boolean;
   disabled?: boolean;
   onClick?: () => void;

@@ -1,16 +1,16 @@
 import React from 'react'
 import classnames from 'classnames'
 import styles from './Message.module.css'
-import { sizeType, variantType } from '../globalTypes'
+import { SizeType, VariantType } from '../globalTypes'
 
-import { Icon, iconNamesType, iconStyleType } from '../Icon'
+import { Icon, IconNamesType } from '../Icon'
 import { Text } from '../Text'
 
 interface MessageProps {
   message: string;
-  icon?: iconNamesType;
-  size?: sizeType;
-  variant?: variantType;
+  icon?: IconNamesType;
+  size?: SizeType;
+  variant?: VariantType;
   children?: React.ReactNode;
 }
 

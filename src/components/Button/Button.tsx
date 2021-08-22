@@ -1,20 +1,20 @@
 import React from 'react'
 import classnames from 'classnames'
 import styles from './Button.module.css'
-import { sizeType, variantType, textWeightTypes } from '../globalTypes'
+import { SizeType, VariantType } from '../globalTypes'
 
 import { Icon, iconNamesType, iconStyleType } from '../Icon'
-import { Text } from '../Text'
+import { Text, TextWeightType } from '../Text'
 import { Spinner } from '../Spinner'
 
-type ButtonProps = {
+interface ButtonProps {
   label?: string;
   icon?: iconNamesType;
   iconStyle?: iconStyleType;
-  size?: sizeType;
+  size?: SizeType;
   type?: 'button' | 'submit';
-  variant?: variantType;
-  textWeight?: textWeightTypes;
+  variant?: VariantType;
+  textWeight?: TextWeightType;
   fullwidth?: boolean;
   disabled?: boolean;
   loading?: boolean;

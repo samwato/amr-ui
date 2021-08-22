@@ -1,11 +1,11 @@
 import React from 'react'
 import classnames from 'classnames'
 import styles from './ButtonGroup.module.css'
-import { justifyContentType } from '../globalTypes'
+import { JustifyContentType } from '../globalTypes'
 
-type ButtonGroupProps = {
+interface ButtonGroupProps {
   joined?: boolean;
-  justifyContent? : justifyContentType;
+  justifyContent? : JustifyContentType;
   children: React.ReactNode;
 }
 

@@ -1,11 +1,13 @@
 import React from 'react'
 import classnames from 'classnames'
 import styles from './Spinner.module.css'
-import { spinnerSizeType, variantType } from '../globalTypes'
+import { VariantType } from '../globalTypes'
+
+type SpinnerSizeType = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xl2' | 'xl3' | 'xl4' | 'xl5';
 
 interface SpinnerProps {
-  size?: spinnerSizeType;
-  variant?: variantType;
+  size?: SpinnerSizeType;
+  variant?: VariantType;
 }
 
 export const Spinner = ({

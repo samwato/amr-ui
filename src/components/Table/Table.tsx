@@ -1,11 +1,9 @@
 import React, { useMemo, useState } from 'react'
 import classnames from 'classnames'
 import styles from './Table.module.css'
-import { TableType } from '../Table'
-import { textSizeType } from '../globalTypes'
 
 import { IconButton } from '../IconButton'
-import { Text } from '../Text'
+import { Text, TextSizeType } from '../Text'
 
 import {
   useTable,
@@ -17,18 +15,30 @@ import {
   useFlexLayout,
 } from 'react-table'
 
-type TableProps = {
+type TableColumnType = {
+  Header: string;
+  accessor: string;
+  sortType?: string;
+  disableFilters?: boolean;
+}
+
+type TableType = {
+  columns: TableColumnType[];
+  data: {};
+}
+
+interface TableProps {
   data: TableType;
-  textSize: textSizeType;
+  textSize: TextSizeType;
   resizable?: boolean;
 }
+
 
 export const Table = ({
   data,
   textSize = 'sm',
   resizable = false,
 }: TableProps) => {
-  
   
   const DefaultColumnFilter = ({ column: { Header, filterValue, setFilter } }) => {    
     return (

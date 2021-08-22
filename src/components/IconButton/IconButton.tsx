@@ -1,16 +1,16 @@
 import React from 'react'
 import classnames from 'classnames'
 import styles from './IconButton.module.css'
-import { iconSizeType, variantType } from '../globalTypes'
+import { VariantType } from '../globalTypes'
 
-import { Icon, iconNamesType, iconStyleType } from '../Icon'
+import { Icon, IconNamesType, IconStyleType, IconSizeType } from '../Icon'
 
-type IconButtonProps = {
-  icon: iconNamesType;
-  iconStyle?: iconStyleType;
-  size?: iconSizeType;
+interface IconButtonProps {
+  icon: IconNamesType;
+  iconStyle?: IconStyleType;
+  size?: IconSizeType;
   type?: 'button' | 'submit';
-  variant?: variantType;
+  variant?: VariantType;
   disabled?: boolean;
   title?: string;
   onClick?: () => void;
