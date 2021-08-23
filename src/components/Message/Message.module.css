@@ -58,3 +58,7 @@
   background-color: var(--success-trans);
   border: 1px solid var(--success-trans);
 }
+
+.container.sm {
+  padding: 8px 10px;
+}

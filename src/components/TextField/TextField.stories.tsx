@@ -12,5 +12,33 @@ const Template: ComponentStory<typeof TextField> = (args) => <TextField {...args
 
 export const Default = Template.bind({})
 Default.args = {
+  id: 'firstname',
+  name: 'firstname',
+  type: 'text',
+  label: 'Firstname',
+  placeholder: 'Firstname',
+  align: 'left',
+  size: 'sm',
+}
 
+export const Number = Template.bind({})
+Number.args = {
+  ...Default.args,
+  type: 'number',
+  suffix: '˚C',
+  value: 234142,
+  align: 'right',
+}
+
+export const Required = Template.bind({})
+Required.args = {
+  ...Default.args,
+  required: true,
+  value: '',
+}
+
+export const Error = Template.bind({})
+Error.args = {
+  ...Default.args,
+  error: 'Something is wrong',
 }

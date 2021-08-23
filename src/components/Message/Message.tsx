@@ -7,7 +7,6 @@ import { Icon, IconNamesType } from '../Icon'
 import { Text } from '../Text'
 
 interface MessageProps {
-  message: string;
   icon?: IconNamesType;
   size?: SizeType;
   variant?: VariantType;
@@ -16,6 +15,7 @@ interface MessageProps {
 
 export const Message = ({
   icon,
+  size,
   variant = 'info',
   children,
 }: MessageProps) => {
@@ -32,6 +32,7 @@ export const Message = ({
     [styles.warning]: variant === 'warning',
     [styles.error]: variant === 'error',
     [styles.success]: variant === 'success',
+    [styles.sm]: size === 'sm',
   })
   
   return (

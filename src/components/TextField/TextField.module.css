@@ -1,11 +1,86 @@
 .container {
-  
+  display: flex;
+  flex-direction: column;
 }
 
 .label {
-  
+  margin: 5px 0;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  position: relative;
 }
 
 .input {
-  
+  composes: textReset from '../global.module.css';
+  color: var(--dark-text);
+  border-radius: 3px;
+  padding: 8px 12px;
+  border: 1px solid var(--light-text-dark-2);
+  z-index: 1;
+}
+
+.input:focus {
+  border: 1px solid var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 4px var(--primary-light-3);
+}
+
+.sm {
+  font-size: 0.8em;
+}
+
+.md {
+  font-size: 1em;
+}
+
+.lg {
+  font-size: 1.2em;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.prefix, .suffix {
+  color: var(--dark-text-light-2);
+  z-index: 2;
+  padding: 8px 12px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.prefix {
+  margin-right: -34px;
+}
+
+.suffix {
+  margin-left: -34px;
+}
+
+.hasPrefix {
+  padding-left: 26px;
+}
+
+.hasSuffix {
+  padding-right: 26px;
+}
+
+.required {
+  margin-top: 3px;
+}
+
+.error {
+  margin-bottom: 5px;
 }
