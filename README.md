@@ -1,6 +1,13 @@
 # AMR UI
-This is a react component library being build for internal projects.
-The goal is to convert the existing modules into this library ready to be used.
+This repo is a React component library for all ui elements related to the AMR Hub project.
+These new components are written in Typescript and visualized with Storybook.
+The idea is to replace the react-pepper-ui library with better components via npm.
+For future this library will be used as the foundation for all custom GUI projects.
+
+## Things Todo
+- Continue work on replacing existing components with Typescript
+- Add testing
+
 
 ## Project Setup
 ```
@@ -28,3 +35,4 @@ npm i -D storybook-css-modules-preset typescript-plugin-css-modules
   "storybook-css-modules-preset",
   
 // package.json remove react scripts
+
