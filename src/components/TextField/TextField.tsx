@@ -5,6 +5,7 @@ import { SizeType } from '../globalTypes'
 
 import { Text } from '../Text'
 import { Message } from '../Message'
+import { IconButton } from '../IconButton'
 
 export type TextFieldTypes =
   | 'text'
@@ -36,6 +37,7 @@ type TextFieldProps = {
   required?: boolean;
   disabled?: boolean;
   onChange?: () => void;
+  onClear?: () => void;
 }
 
 export const TextField = ({
@@ -53,6 +55,7 @@ export const TextField = ({
   required = false,
   disabled = false,
   onChange,
+  onClear,
 }: TextFieldProps) => {
   
   const inputClasses = classnames({
@@ -65,6 +68,7 @@ export const TextField = ({
     [styles.right]: align === 'right',
     [styles.hasPrefix]: prefix,
     [styles.hasSuffix]: suffix,
+    [styles.isSearch]: type === 'search',
   })
     
   const labelComponent = label ?
@@ -107,7 +111,8 @@ export const TextField = ({
     <div className={styles.container}>
       {labelComponent}
       {errorComponent}
-      <div className={styles.inputContainer}>
+      <div className={styles.inputWrapper}>
+      
         {prefix ? 
           <div className={styles.prefix}>
             <Text
@@ -116,17 +121,34 @@ export const TextField = ({
             >{prefix}</Text>
           </div>
          : null}
-        <input
-          className={inputClasses}
-          type={type}
-          id={id}
-          name={name}
-          value={value}
-          placeholder={placeholder}
-          onChange={onChange}
-          required={required}
-          disabled={disabled}
-        />
+         
+         <div className={styles.inputContainer}>
+           <input
+             className={inputClasses}
+             type={type}
+             id={id}
+             name={name}
+             value={value}
+             placeholder={placeholder}
+             onChange={onChange}
+             required={required}
+             disabled={disabled}
+           />
+           
+           {type === 'search' && value ? 
+             <div className={styles.search}>
+               <IconButton
+                 icon="XCircleIcon"
+                 iconStyle="solid"
+                 size={size}
+                 type="button"
+                 variant="dark"
+                 onClick={onClear}
+               />
+             </div>
+           : null }
+         </div>
+        
         {suffix ? 
           <div className={styles.suffix}>
             <Text
@@ -136,6 +158,7 @@ export const TextField = ({
           </div>
          : null}
       </div>
+      
       {requiredComponent}
     </div>
   )

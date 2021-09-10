@@ -4,6 +4,7 @@ import styles from './Table.module.css'
 
 import { IconButton } from '../IconButton'
 import { Text, TextSizeType } from '../Text'
+import { TextField } from '../TextField'
 
 import {
   useTable,
@@ -40,21 +41,27 @@ export const Table = ({
   resizable = false,
 }: TableProps) => {
   
-  const DefaultColumnFilter = ({ column: { Header, filterValue, setFilter } }) => {    
+  const DefaultColumnFilter = ({ column, callback }) => {
+    const { Header, filterValue, setFilter, toggleHidden } = column
     return (
-      <input
-        className={styles.filterInput}
+      <TextField
         value={filterValue || ''}
+        size="sm"
+        type="search"
+        placeholder={Header}
         onChange={e => {
           setFilter(e.target.value || undefined) // Set undefined to remove the filter entirely
         }}
-        placeholder={Header}
+        onClear={() => {
+          setFilter(undefined)
+          callback()
+        }}
       />
     )
   }
   
   const TableHeaderCell = ({ column }) => {
-    
+
     const [showFilter, setShowFilter] = useState(false)
     
     const filterOptionClasses = classnames({
@@ -63,44 +70,37 @@ export const Table = ({
     const sortOptionClasses = classnames({
       [styles.isOption]: column.isSorted,
     })
+    
     return (
-      
       <div {...column.getHeaderProps()} className={styles.headerCell}>
         <div>
         {!showFilter ? 
-          <Text size={textSize} weight="600">
+          <Text size={textSize}>
             {column.render('Header')}
           </Text>
         : 
           <div className={styles.filterOption}>
-            {column.render('Filter')}
-            <div className={styles.filterClose}>
-              <IconButton
-                icon="XIcon"
-                iconStyle="solid"
-                size="xs"
-                variant="plain"
-                onClick={() => {
-                  column.setFilter(undefined)
-                  setShowFilter(false)
-                }}
-              />
-            </div>
+            {column.render('Filter', {
+              callback: () => setShowFilter(false)
+            })}
           </div>
         }
         </div>
         <div className={styles.headerOptions}>
           <div className={filterOptionClasses}>
-            {!showFilter ? 
-              <IconButton
-                icon="SearchIcon"
-                iconStyle="solid"
-                variant="primary"
-                size="sm"
-                onClick={() => {
-                  setShowFilter(true)
-                }}
-              /> : null }
+            <IconButton
+              icon="SearchIcon"
+              iconStyle="solid"
+              variant="primary"
+              size="sm"
+              onClick={!showFilter ?
+                () => setShowFilter(true)
+                : () => {
+                  column.setFilter(undefined)
+                  setShowFilter(false)
+                }
+              }
+            />
           </div>
           <div
             className={sortOptionClasses}

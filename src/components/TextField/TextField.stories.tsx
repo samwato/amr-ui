@@ -6,6 +6,11 @@ import { TextField } from './TextField'
 export default {
   title: 'Form/TextField',
   component: TextField,
+  argTypes: {
+    onChange: {
+      action: 'onchange'
+    }
+  }
 } as ComponentMeta<typeof TextField>
 
 const Template: ComponentStory<typeof TextField> = (args) => <TextField {...args} />
@@ -27,6 +32,12 @@ Number.args = {
   type: 'number',
   value: 234142,
   align: 'right',
+}
+
+export const Search = Template.bind({})
+Search.args = {
+  ...Default.args,
+  type: 'search',
 }
 
 export const PrefixSuffix = Template.bind({})
