@@ -4,7 +4,6 @@ import styles from './Message.module.css'
 import { SizeType, VariantType } from '../globalTypes'
 
 import { Icon, IconNamesType } from '../Icon'
-import { Text } from '../Text'
 
 interface MessageProps {
   icon?: IconNamesType;

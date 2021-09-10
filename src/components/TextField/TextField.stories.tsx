@@ -25,9 +25,17 @@ export const Number = Template.bind({})
 Number.args = {
   ...Default.args,
   type: 'number',
-  suffix: '˚C',
   value: 234142,
   align: 'right',
+}
+
+export const PrefixSuffix = Template.bind({})
+PrefixSuffix.args = {
+  ...Default.args,
+  type: 'number',
+  prefix: '$',
+  suffix: '˚C',
+  align: 'left',
 }
 
 export const Required = Template.bind({})

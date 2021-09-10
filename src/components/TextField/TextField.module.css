@@ -16,10 +16,20 @@
 .input {
   composes: textReset from '../global.module.css';
   color: var(--dark-text);
-  border-radius: 3px;
-  padding: 8px 12px;
+  border-radius: var(--input-border-radius);
+  padding: 8px;
   border: 1px solid var(--light-text-dark-2);
   z-index: 1;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .input:focus {
@@ -55,26 +65,37 @@
 .prefix, .suffix {
   color: var(--dark-text-light-2);
   z-index: 2;
-  padding: 8px 12px;
+  margin: 0;
+  padding: 8px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
 }
 
 .prefix {
-  margin-right: -34px;
+  border-radius: var(--input-border-radius) 0 0 var(--input-border-radius);
+  border-top: 1px solid var(--light-text-dark-2);
+  border-left: 1px solid var(--light-text-dark-2);
+  border-bottom: 1px solid var(--light-text-dark-2);
 }
 
 .suffix {
-  margin-left: -34px;
+  border-radius: 0 var(--input-border-radius) var(--input-border-radius) 0;
+  border-top: 1px solid var(--light-text-dark-2);
+  border-right: 1px solid var(--light-text-dark-2);
+  border-bottom: 1px solid var(--light-text-dark-2);
 }
 
 .hasPrefix {
-  padding-left: 26px;
+  border-radius: 0 var(--input-border-radius) var(--input-border-radius) 0;
 }
 
 .hasSuffix {
-  padding-right: 26px;
+  border-radius: var(--input-border-radius) 0 0 var(--input-border-radius);
+}
+
+.hasPrefix.hasSuffix {
+  border-radius: 0;
 }
 
 .required {
@@ -82,5 +103,6 @@
 }
 
 .error {
-  margin-bottom: 5px;
+  margin: 2px 0 7px 0;
+  display: flex;
 }

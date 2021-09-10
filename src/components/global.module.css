@@ -32,6 +32,8 @@
   --error-trans: rgba(255,88,88,0.1);
   --success: #53E09A;
   --success-trans: rgba(83,224,154,0.1);
+  
+  --input-border-radius: 3px;
 }
 
 

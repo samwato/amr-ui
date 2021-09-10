@@ -71,7 +71,7 @@ export const TextField = ({
     <div className={styles.label}>
       <Text
         tag="label"
-        size="sm"
+        size={size}
         htmlFor={id}
       >{label}</Text>
     </div> : null
@@ -84,18 +84,23 @@ export const TextField = ({
     <div className={styles.required}>
       <Text
         tag="span"
-        size="xs"
+        size={size}
         variant="error"
       >* required</Text>
     </div> : null
     
   const errorComponent = error ? 
     <div className={styles.error}>
-      <Text
-        tag="span"
-        size="xs"
-        variant="error"
-      >{error}</Text>
+      <Message
+        icon="ExclamationCircleIcon"
+        size={size}
+        variant="error">
+        <Text
+          tag="p"
+          size={size}
+        >{error}
+        </Text>
+      </Message>
     </div> : null
   
   return (
@@ -107,7 +112,7 @@ export const TextField = ({
           <div className={styles.prefix}>
             <Text
               tag="span"
-              size="xs"
+              size={size}
             >{prefix}</Text>
           </div>
          : null}
@@ -126,7 +131,7 @@ export const TextField = ({
           <div className={styles.suffix}>
             <Text
               tag="span"
-              size="xs"
+              size={size}
             >{suffix}</Text>
           </div>
          : null}
