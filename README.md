@@ -1,7 +1,7 @@
 # AMR UI
 This repo is a React component library for all ui elements related to the AMR Hub project.
 These new components are written in Typescript and visualized with Storybook.
-The idea is to replace the react-pepper-ui library with better components via npm.
+The idea is to replace the src/ui folder with better components via npm.
 For future this library will be used as the foundation for all custom GUI projects.
 
 ## Things Todo
